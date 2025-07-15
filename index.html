@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OLAMYKxVBOT — WhatsApp Bot Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Simple Fade-In Animation */
+    .fade-in {
+      opacity: 0;
+      animation: fadeIn ease-in 1.2s forwards;
+    }
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .hero h2, .hero p, .btn {
+      animation: fadeIn ease-in 1.2s forwards;
+      animation-delay: 0.3s;
+    }
+
+    .feature-grid .card {
+      transition: all 0.3s ease-in-out;
+    }
+
+    .feature-grid .card:hover {
+      transform: translateY(-10px);
+      background: rgba(0, 0, 0, 0.3);
+      box-shadow: 0 0 25px rgba(0, 255, 213, 0.3);
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="logo">OLAMYKxVBOT</div>
+    <nav class="nav">
+      <a href="#features">Features</a>
+      <a href="settings.html">Settings</a>
+      <a href="analytics.html">Analytics</a>
+      <a href="user-management.html">Users</a>
+    </nav>
+  </header>
+
+  <section class="hero fade-in">
+    <h2>Your Smart WhatsApp Bot</h2>
+    <p>Auto-reply, Savage Mode, AI-Powered, and Fully Under Your Control</p>
+    <a href="#qr" class="btn">Scan QR to Connect WhatsApp</a>
+  </section>
+
+  <section class="features" id="features">
+    <h3 class="fade-in">Bot Capabilities</h3>
+    <div class="feature-grid">
+      <div class="card fade-in">
+        <h4>Savage Mode</h4>
+        <p>Enable witty or savage auto-replies with a single toggle.</p>
+        <a class="card-btn" href="settings.html">Toggle</a>
+      </div>
+      <div class="card fade-in">
+        <h4>Selective Reply</h4>
+        <p>Choose contacts/groups the bot should auto-reply to.</p>
+        <a class="card-btn" href="user-management.html">Manage</a>
+      </div>
+      <div class="card fade-in">
+        <h4>Status Auto-Liker</h4>
+        <p>Like selected contacts' WhatsApp statuses automatically.</p>
+        <a class="card-btn" href="settings.html">Activate</a>
+      </div>
+      <div class="card fade-in">
+        <h4>Deleted Message Recovery</h4>
+        <p>View and restore deleted messages in chat.</p>
+        <a class="card-btn" href="analytics.html">View Logs</a>
+      </div>
+      <div class="card fade-in">
+        <h4>Voice to Text</h4>
+        <p>Convert voice messages into clean readable text.</p>
+        <a class="card-btn" href="settings.html">Try it</a>
+      </div>
+      <div class="card fade-in">
+        <h4>AI Assistant</h4>
+        <p>Use OpenAI to generate smart responses, quotes, and info.</p>
+        <a class="card-btn" href="test.html">Test AI</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="qr" class="features fade-in">
+    <h3>🔗 WhatsApp Connection</h3>
+    <p>Scan this QR code to link OLAMYKxVBOT to your WhatsApp account.</p>
+    <div style="text-align:center; padding:20px">
+      <img src="http://localhost:5000/qr" alt="WhatsApp QR Code" style="max-width: 300px; border-radius: 20px; box-shadow: 0 0 15px rgba(0,255,213,0.2);">
+    </div>
+  </section>
+
+  <footer class="footer fade-in">
+    <p>&copy; 2025 OLAMYKxVBOT. Built with 💚 by OLAMYK & Buddy.</p>
+  </footer>
+</body>
+</html>

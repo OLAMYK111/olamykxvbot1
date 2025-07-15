@@ -42,6 +42,27 @@
       </div>
     </section>
   </main>
+<script>
+async function sendToBot(message) {
+  const res = await fetch('http://localhost:5000/api/ai-reply', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ prompt: message })
+  });
+
+  const data = await res.json();
+  console.log('Reply:', data.reply);
+  document.getElementById("response").innerText = data.reply;
+}
+
+document.getElementById("sendBtn").addEventListener("click", () => {
+  const userInput = document.getElementById("userInput").value;
+  sendToBot(userInput);
+});
+</script>
+
 
   <footer>
     <p>Made with ❤️ by OLAMYK</p>

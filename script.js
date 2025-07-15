@@ -49,3 +49,20 @@ document.querySelectorAll(".card-btn").forEach(btn => {
     btn.addEventListener("click", showComingSoon);
   }
 });
+// CONNECT TO AI REPLY ENDPOINT
+const sendTestPrompt = async () => {
+  const response = await fetch("http://localhost:5000/api/ai-reply", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ message: "Hello OLAMYKxBOT" }),
+  });
+
+  const data = await response.json();
+  console.log("AI Reply:", data.reply);
+};
+
+// Run test (REMOVE this in production)
+sendTestPrompt();
+
